@@ -92,4 +92,107 @@ a {
 .banner{
     background: mintcream;
     padding: 50px 15px;
+    position: relative; /*화살표 위치 기준점*/
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /*세로 중앙 위치*/
+    border: none;
+    cursor: pointer;
+
+    background: lightgrey;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right{
+    right: 20px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card:hover { /*hover:마우스 커서를 요소 위에 올렸을 때만 적용되는 스타일을 지정*/
+    background-color: aliceblue;
+}
+
+.card h3 {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: lightgrey;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.card .link {
+    color: darkblue;
+    font-size: 0.85rem;
+}
+
+.board {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.board-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.board-tabs {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;/* 왼쪽 남은 공간을 전부 흡수해서 탭과 더보기를 오른쪽으로 밀어줌 */
+}
+
+.tab {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+
+.tab.active{
+    color: darkblue;
+    font-weight: bold;
+    border-bottom: 2px solid darkblue;
+}
+
+.more-link {
+    margin-left: 30px; /* 글자 사이가 너무 붙지 않게 왼쪽으로 띄어주기 */
+}
+
+.menu ul li a:hover {
+    color: darkblue;
+    border-bottom: 2px solid #1c3f94;
+    padding-bottom: 4px;
+}
+
+.tab:hover {
+    color: #1c3f94;
 }
