@@ -1,7 +1,7 @@
 .site{
     display: flex; /*요소 안의 자식들(로고, 메뉴, 버튼)을 가로로 나란히 배치*/
-    justify-content: space-between; /*자식 요소들 사이 간격을 균등*/
-    align-items: center;
+    justify-content: space-between; /*자식 요소들 사이 간격을 균등*/ /*가로방향*/
+    align-items: center; /*세로방향*/
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
@@ -12,6 +12,10 @@
     display: flex;
     gap: 20px;
     text-align: center;
+}
+.menu ul li a::after {
+    content: " ▾";
+    font-size: 1rem;
 }
 
 .menu ul li a:hover{
@@ -25,7 +29,7 @@ a {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* flex 기본은 가로 배치인데, 이걸로 세로 배치로 바꿈 */
 }
 
 .name {
@@ -101,7 +105,7 @@ a {
 }
 
 .arrow {
-    position: absolute;
+    position: absolute; /*원래 있던 자리에서 벗어나 자유롭게 위치*/
     top: 50%;
     transform: translateY(-50%); /*세로 중앙 위치*/
     border: none;
@@ -127,8 +131,7 @@ a {
 
 .box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /*2개의 열을 만들고 각 열은 같은 너비로 나누라는 뜻*/
 }
 
 .card{
@@ -148,12 +151,12 @@ a {
 }
 
 .card p{
-    color: lightgrey;
+    color: gray;
     font-size: 0.9rem;
     margin-bottom: 12px;
 }
 
-.card .link {
+.card .link { /*띄어쓰기가 있으면 카드안에 링크, 없으면 카드이면서 동시에 링크*/
     color: darkblue;
     font-size: 0.85rem;
 }
@@ -172,7 +175,8 @@ a {
 .board-tabs {
     display: flex;
     gap: 16px;
-    margin-left: auto;/* 왼쪽 남은 공간을 전부 흡수해서 탭과 더보기를 오른쪽으로 밀어줌 */
+    flex: 1;
+    justify-content: center;
 }
 
 .tab {
