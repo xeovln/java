@@ -1,6 +1,9 @@
 .site{
-    display: flex;
+    display: flex; /*요소 안의 자식들(로고, 메뉴, 버튼)을 가로로 나란히 배치*/
+    justify-content: space-between; /*자식 요소들 사이 간격을 균등*/
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px 40px;
 }
 
@@ -9,9 +12,11 @@
     display: flex;
     gap: 20px;
     text-align: center;
-
 }
 
+.menu ul li a:hover{
+    background-color: aliceblue;
+}
 
 a {
     color: inherit;
