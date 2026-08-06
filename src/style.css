@@ -184,6 +184,8 @@ a {
     background: none;
     cursor: pointer;
     padding-bottom: 4px;
+    color: black;
+    border-bottom: 2px solid transparent;
 }
 
 .tab.active{

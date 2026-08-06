@@ -34,33 +34,33 @@
     </div>
 </header>
 <section class="banner"> <!--배경 적용 한 번에 하기 위해 사용-->
-    <button class="arrow arrow-left">‹</button>
+    <button class="arrow arrow-left" id="prevBtn">‹</button> <!--Js가 조작할 수 있게 ID 달아주기-->
 <div class= "title">
-    <h1>전자정부 표준프레임워크 정기교육 일정 변경 안내</h1>
+    <h1 id="bannerTitle">전자정부 표준프레임워크 정기교육 일정 변경 안내</h1>
 </div>
-<div class= "subtitle">
+<div class= "subtitle" id="bannerSub">
     <p>2026년 온라인 교육(초/중급 과정) 상시 운영</p>
     <p>*교육 일정: 2026년 7월 20일부터 상시 신청 및 수강</p>
     <p>2026년 오프라인 교육 일정은 기존과 동일</p>
 </div>
 <div class="look-button">
-    <button class ="look">
+    <button class ="look" id="toggleBtn">
         <span class=" label">자세히 보러가기 > </span>
     </button>
 </div>
-    <button class="arrow arrow-right">›</button>
+    <button class="arrow arrow-right" id="nextBtn">›</button>
 </section>
 
 <section class = "board">
     <div class ="board-header">
     <h2>게시판</h2>
         <div class="board-tabs">
-    <button class="tab active">공지사항</button>
-    <button class="tab">자료실</button>
+    <button class="tab active" id="noticeTab">공지사항</button>
+    <button class="tab" id="archiveTab">자료실</button>
     </div>
     <a href="#" class="more-link">더보기+</a>
     </div>
-    <div class="box">
+    <div class="box" id="noticeBox">
         <div class="card">
             <h3><a href="#"> 2026년도 3분기 공통컴포넌트(ㅍ5.0.6) 보안 패치 안내</a> </h3>
             <p>안녕하십니까? 표준프레임워크센터입니다. 관련 취약점 내용을 국가사이버보...</p>
@@ -82,6 +82,29 @@
             <a href="#" class="link">자세히보기 →</a>
         </div>
     </div>
+    <div class="box" id="archiveBox" style="display: none;">
+    <div class="card">
+        <h3><a href="#"> 표준프레임워크 버전별 업그레이드 가이드 - v5.0 기준</a> </h3>
+        <p>전자정부 표준프레임워크 3.10.0 / 4.x.x 버전을 사용 중인 시스...</p>
+        <a href="#" class="link">자세히보기 →</a>
+    </div>
+    <div class="card">
+        <h3><a href="#"> 정보시스템 구축 발주자를 위한 표준프레임워크 적용가이드 5.0(2026.04)</a> </h3>
+        <p>정보사스템 구축 발주자를 위한 표준프레임워크 및 공통컴포넌트 적용가이드...</p>
+        <a href="#" class="link">자세히보기 →</a>
+    </div>
+    <div class="card">
+        <h3><a href="#"> 2025 전자정부 표준프레임워크 신규버전 발표회 자료 (2025.12.05)></a> </h3>
+        <p>2025 전자정부 표준프레임워크 신규버전 발표회 자료 다운로드 (발표...</p>
+        <a href="#" class="link">자세히보기 →</a>
+    </div>
+    <div class="card">
+        <h3><a href="#"> 정보시스템 구축 발주자를 위한 표준프레임워크 적용가이드 4.3(2025.03)</a> </h3>
+        <p>정보시스템 구축 발주자를 위한 표준프레임워크 및 공통컴포넌트 적용가이드...</p>
+        <a href="#" class="link">자세히보기 →</a>
+    </div>
+    </div>
 </section>
+<script src="script.js"></script>
 </body>
 </html>
